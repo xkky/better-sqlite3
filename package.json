@@ -30,6 +30,7 @@
     "sqlite3": "^5.1.6"
   },
   "scripts": {
+    "rebuild": "electron-rebuild -f -w better-sqlite3",
     "install": "prebuild-install || node-gyp rebuild --release",
     "build-release": "node-gyp rebuild --release",
     "build-debug": "node-gyp rebuild --debug",
