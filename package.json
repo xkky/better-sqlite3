@@ -1,6 +1,6 @@
 {
-  "name": "better-sqlite3",
-  "version": "11.9.1",
+  "name": "@aidenlx/better-sqlite3",
+  "version": "11.5.0",
   "description": "The fastest and simplest library for SQLite in Node.js.",
   "homepage": "http://github.com/WiseLibs/better-sqlite3",
   "author": "Joshua Wise <joshuathomaswise@gmail.com>",
@@ -17,7 +17,8 @@
   ],
   "dependencies": {
     "bindings": "^1.5.0",
-    "prebuild-install": "^7.1.1"
+    "prebuild-install": "^7.1.1",
+    "rebuild": "^0.1.2"
   },
   "devDependencies": {
     "chai": "^4.3.8",
@@ -30,8 +31,9 @@
     "sqlite3": "^5.1.6"
   },
   "scripts": {
-    "rebuild": "electron-rebuild -f -w better-sqlite3",  //使用指定的electron版本构建
+    "rebuild": "electron-rebuild -f -w better-sqlite3",
     "install": "prebuild-install || node-gyp rebuild --release",
+    "build": "npm install rebuild",
     "build-release": "node-gyp rebuild --release",
     "build-debug": "node-gyp rebuild --debug",
     "rebuild-release": "npm run lzz && npm run build-release",
