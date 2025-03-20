@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "bindings": "^1.5.0",
-    "prebuild-install": "^7.1.1"
+    "prebuild-install": "^7.1.3"
   },
   "devDependencies": {
     "chai": "^4.3.8",
@@ -30,6 +30,7 @@
     "sqlite3": "^5.1.6"
   },
   "scripts": {
+    "rebuild": "node-gyp rebuild --target=34.3.0 --dist-url=https://www.electronjs.org/headers --release",
     "install": "prebuild-install || node-gyp rebuild --release",
     "build": "node-gyp rebuild --release",
     "build-release": "node-gyp rebuild --release",
